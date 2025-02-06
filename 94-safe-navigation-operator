@@ -1,10 +1,8 @@
 public String getAccountBillingCityWithSafeNavigation(List<Account> accounts){
     
-    if(accounts == null){
+    if (accounts == null) {
         throw new IllegalArgumentException('accounts should not be null');
     }
 
-    for(Account acc : accounts){
-        return accounts.isEmpty() ? null : accounts[0].BillingCity?.toUpperCase();
-    }
+    return accounts.isEmpty() ? null : accounts[0].BillingCity?.toUpperCase();
 }
