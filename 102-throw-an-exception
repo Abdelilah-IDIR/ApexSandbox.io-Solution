@@ -7,7 +7,7 @@ public List<Account> checkAccounts(List<Account> accounts)
 
     for(Account acc : accounts){
         if(acc.BillingCity == null || acc.BillingCity.trim().isEmpty()){
-            throw new IllegalArgumentException('Invalid BillingCity');
+            throw new AccountException('Invalid BillingCity');
         }
     }
 
