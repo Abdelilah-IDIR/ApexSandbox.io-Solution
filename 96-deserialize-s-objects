@@ -1,6 +1,6 @@
 public List<Account> getAccountsFromJSONString(String inputJSON){
     
-    if(inputJSON.isEmpty()) {
+    if(String.isEmpty(inputJSON)) {
         return null;
     }
 
