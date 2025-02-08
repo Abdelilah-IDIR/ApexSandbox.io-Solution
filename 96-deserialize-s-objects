@@ -4,5 +4,5 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
         return null;
     }
 
-    return string.valueOf(deserialize(inputJSON));
+    return JSON.deserialize(inputJSON);
 }
