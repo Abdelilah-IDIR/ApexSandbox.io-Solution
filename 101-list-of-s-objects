@@ -6,8 +6,16 @@ public List<sObject> getListOfsObject(List<Account> accounts, List<Contact> cont
 
     List<sObject> newList = new List<sObject>;
 
-    for(sObject objects : accounts, contacts) {
-        newList.add(objects);
+    if(accounts != null) {
+        for(Account acc : accounts) {
+            newList.add(acc);
+        }
+    }
+
+    if(contacts != null) {
+        for(Contact con : contacts) {
+            newList.add(con);
+        }
     }
 
     return newList;
