@@ -1,6 +1,10 @@
 public List<Account> getAccounts(List<Account> accounts) {
 
-    accounts?.sort(new AnnualRevenueComparator());
+    if (accounts == null || accounts.isEmpty()) {
+        return new List<Account>();
+    }
+    
+    accounts.sort(new AnnualRevenueComparator());
 
     return accounts;
 }
@@ -9,22 +13,9 @@ public class AnnualRevenueComparator implements Comparator<Account> {
 
     public Integer compare(Account acc1, Account acc2) {
 
-        if (acc1?.AnnualRevenue == null && acc2?.AnnualRevenue == null) {
+        Decimal revenue1 = acc1?.AnnualRevenue != null ? acc1.AnnualRevenue : 0;
+        Decimal revenue2 = acc2?.AnnualRevenue != null ? acc2.AnnualRevenue : 0;
 
-            return 0; // Both null, considered equal
-
-        } else if(acc1.AnnualRevenue<acc2.AnnualRevenue) {
-
-            return 1;
-
-        }
-
-        else {
-
-            return -1;
-
-        }
-
+        return revenue2.compareTo(revenue1);
     }
-
 }
