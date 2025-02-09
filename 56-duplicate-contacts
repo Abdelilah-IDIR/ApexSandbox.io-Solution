@@ -1,7 +1,8 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
 
-    if (c1.Phone != null && c2.Phone != null) {
+    if (c1.Phone.isEmpty() && c2.Phone.isEmpty()) {
         return (c1.Phone == c2.Phone) ? True : False;
     }
+
 
 }
