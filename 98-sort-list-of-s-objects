@@ -16,6 +16,6 @@ public class AnnualRevenueComparator implements Comparator<Account> {
         Decimal revenue1 = acc1?.AnnualRevenue != null ? acc1.AnnualRevenue : 0;
         Decimal revenue2 = acc2?.AnnualRevenue != null ? acc2.AnnualRevenue : 0;
 
-        return Dicimal.valueOf(revenue2.compareTo(revenue1));
+        return revenue2.compareTo(revenue1);
     }
 }
