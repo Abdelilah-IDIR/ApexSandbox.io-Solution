@@ -1,7 +1,7 @@
 public Boolean duplicateContacts(Contact c1, Contact c2) {
 
-    if (c1.Phone != null && c2.Phone != null && c1.Email != null && c1.Email != nul) {
-        return (c1.Phone == c2.Phone) ? true : false;
+    if (c1.Phone != null && c2.Phone != null && c1.Email != null && c1.Email != null) {
+        return ((c1.Phone == c2.Phone) || (c1.Email == c2.Email)) ? true : false;
     }
 
 }
