@@ -1,3 +1,3 @@
 public Boolean isBirthday(Contact c) {
-    return birthdate.day() == system.today().day() && birthdate.month() == system.today().month();
+    return c.Birthdate.day() == system.today().day() && c.Birthdate.month() == system.today().month();
 }
